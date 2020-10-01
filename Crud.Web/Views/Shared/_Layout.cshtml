@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @*<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.0/umd/react.development.js"></script>
+        <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.0/umd/react-dom.development.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>*@
+    <script src="~/Content/React/react.development.js"></script>
+    <script src="~/Content/React/react-dom.development.js"></script>
+    <script src="~/Content/React/remarkable.min.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Demo Pages
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>@Html.ActionLink("Your First Component", "YourFirstComponent", "Home")</li>
+                                <li>@Html.ActionLink("JSX Syntax", "JSXSyntax", "Home")</li>
+                                <li>@Html.ActionLink("Composing Components", "ComposingComponents", "Home")</li>
+                                <li>@Html.ActionLink("Using Props", "UsingProps", "Home")</li>
+                                <li>@Html.ActionLink("Adding Markdown", "AddingMarkdown", "Home")</li>
+                                <li>@Html.ActionLink("Hook up the data model", "HookUpTheDataModel", "Home")</li>
+                                <li>@Html.ActionLink("Server-Side Data", "ServerSideData", "Home")</li>
+                                <li>@Html.ActionLink("Fetching from the server", "FetchingFromTheServer", "Home")</li>
+                                <li>@Html.ActionLink("Reactive State", "ReactiveState", "Home")</li>
+                                <li>@Html.ActionLink("Updating State", "UpdatingState", "Home")</li>
+                                <li>@Html.ActionLink("Updating State 2", "UpdatingState2", "Home")</li>
+                                <li>@Html.ActionLink("Adding New Comments", "AddingNewComments", "Home")</li>
+                                <li>@Html.ActionLink("TheForm", "TheForm", "Home")</li>
+                                <li>@Html.ActionLink("Controlled Components", "ControlledComponents", "Home")</li>
+                                <li>@Html.ActionLink("Events", "Events", "Home")</li>
+                                <li>@Html.ActionLink("Submitting The Form", "SubmittingTheForm", "Home")</li>
+                                <li>@Html.ActionLink("Callbacks As Props", "CallbacksAsProps", "Home")</li>
+                                <li>@Html.ActionLink("Callbacks As Props 2", "CallbacksAsProps2", "Home")</li>
+                                <li>@Html.ActionLink("Callbacks As Props 3", "CallbacksAsProps3", "Home")</li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

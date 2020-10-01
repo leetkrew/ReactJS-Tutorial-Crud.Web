@@ -1,0 +1,35 @@
+﻿@model Crud.Web.Models.DisplayViewModel
+@{
+    ViewBag.Title = "ReactiveState";
+}
+
+<h2>Reactive State</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="alert-info">
+            <pre>
+@Model.JsxSource
+    </pre>
+        </div>
+    </div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div id="content" class="alert-info" style="padding: 10px"></div>
+    </div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="row">
+    <div class="row">
+        <div class="col-md-3">@Html.ActionLink("Fetching From The Server", "FetchingFromTheServer")</div>
+        <div class="col-md-3">@Html.ActionLink("Updating State", "UpdatingState")</div>
+    </div>
+</div>
+
+<script src="@string.Format("{0}/{1}",  Url.Content("~/Scripts/jsx"), Model.JsxFileName)"></script>

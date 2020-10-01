@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "Content/React/react.development.min.js",
+    "inputFiles": [
+      "Content/React/react.development.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/React/react-dom.development.min.js",
+    "inputFiles": [
+      "Content/React/react-dom.development.js"
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+﻿@model Crud.Web.Models.DisplayViewModel
+@{
+    ViewBag.Title = "HookUpTheDataModel";
+}
+
+<h2>Hook Up The Data Model</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="alert-info">
+            <pre>
+@Model.JsxSource
+    </pre>
+        </div>
+    </div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div id="content" class="alert-info" style="padding: 10px"></div>
+    </div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="row">
+    <div class="row">
+        <div class="col-md-3">@Html.ActionLink("Adding Markdown", "AddingMarkdown")</div>
+        <div class="col-md-3">@Html.ActionLink("Server-Side Data", "ServerSideData")</div>
+    </div>
+</div>
+
+<script src="@string.Format("{0}/{1}",  Url.Content("~/Scripts/jsx"), Model.JsxFileName)"></script>
