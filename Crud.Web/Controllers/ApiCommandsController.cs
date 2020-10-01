@@ -44,8 +44,6 @@ namespace Crud.Web.Controllers
             };
         }
 
-
-
         //[OutputCache(Location = OutputCacheLocation.None)]
         [HttpGet]
         public HttpResponseMessage GetServerSideData()
@@ -66,57 +64,16 @@ namespace Crud.Web.Controllers
         [HttpPost]
         public HttpResponseMessage AddServerSideData([FromBody] CommentModel param)
         {
-
-
             param.Id = _comments.Count + 1;
             _comments.Add(param);
 
             return new HttpResponseMessage()
             {
                 Content = new StringContent(
-                "Success",
-                Encoding.UTF8,
-                "text/html"
-            )
+                    "Success",
+                    Encoding.UTF8,
+                    "text/html")
             };
-
-            //if (ModelState.IsValid)
-            //{
-            //    param.Id = _comments.Count() + 1;
-            //    _comments.Add(param);
-            //    return new HttpResponseMessage()
-            //    {
-            //        Content = new StringContent(
-            //        "Success",
-            //        Encoding.UTF8,
-            //        "text/html"
-            //    )
-            //    };
-            //}
-            //else
-            //{
-            //    return new HttpResponseMessage()
-            //    {
-            //        Content = new StringContent(
-            //        "Fail",
-            //        Encoding.UTF8,
-            //        "text/html"
-            //    )
-            //    };
-            //}
-
-            //id.Id = _comments.Count() + 1;
-            //_comments.Add(id);
-
-            //_comments.Add(new CommentModel() { Id = _comments.Count() + 1, Author = id.Author, Text = id.Text });
-            //_comments.Add(new CommentModel() { Id = _comments.Count() + 1, Author = "xx", Text = "yy" });
-
-
-
         }
-
-
-
-
     }
 }
